@@ -1,0 +1,127 @@
+\hypertarget{course_8h}{}\doxysection{course.\+h File Reference}
+\label{course_8h}\index{course.h@{course.h}}
+
+
+Course library for managing courses, including Course type definition and Course type function declarations.  
+
+
+{\ttfamily \#include \char`\"{}student.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__course}{\+\_\+course}}
+\begin{DoxyCompactList}\small\item\em Course type stores a course with fields name, code, students, total\+\_\+students. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{course_8h_a2540079ef5f89c5f4aea7a0255f11475}\label{course_8h_a2540079ef5f89c5f4aea7a0255f11475}} 
+typedef struct \mbox{\hyperlink{struct__course}{\+\_\+course}} {\bfseries Course}
+\begin{DoxyCompactList}\small\item\em Course type stores a course with fields name, code, students, total\+\_\+students. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{course_8h_af3abbc650ef56ffff427a62dad63fc77}{enroll\+\_\+student}} (\mbox{\hyperlink{course_8h_a2540079ef5f89c5f4aea7a0255f11475}{Course}} $\ast$course, \mbox{\hyperlink{student_8h_ac91ec92866bb82e1ee36c75280929c43}{Student}} $\ast$student)
+\begin{DoxyCompactList}\small\item\em Increments the number of students in course and stores record of new student. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{course_8h_a99bf8b3f3c2d5dc7cf798ed445eaaa77}{print\+\_\+course}} (\mbox{\hyperlink{course_8h_a2540079ef5f89c5f4aea7a0255f11475}{Course}} $\ast$course)
+\begin{DoxyCompactList}\small\item\em Prints name, code, number of students, and list of students for a single course. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{student_8h_ac91ec92866bb82e1ee36c75280929c43}{Student}} $\ast$ \mbox{\hyperlink{course_8h_ac1d82150824c7ecd43bab36fb83cd779}{top\+\_\+student}} (\mbox{\hyperlink{course_8h_a2540079ef5f89c5f4aea7a0255f11475}{Course}} $\ast$course)
+\begin{DoxyCompactList}\small\item\em Identifies the top student in the course. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{student_8h_ac91ec92866bb82e1ee36c75280929c43}{Student}} $\ast$ \mbox{\hyperlink{course_8h_ab1ba9629dc52188231bb689d3a855813}{passing}} (\mbox{\hyperlink{course_8h_a2540079ef5f89c5f4aea7a0255f11475}{Course}} $\ast$course, int $\ast$total\+\_\+passing)
+\begin{DoxyCompactList}\small\item\em Computes dynamic array of passing students for the given course. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Course library for managing courses, including Course type definition and Course type function declarations. 
+
+\begin{DoxyAuthor}{Author}
+Abdul-\/\+Hadi Siddiqui (\href{mailto:sidda1@mcmaster.ca}{\texttt{ sidda1@mcmaster.\+ca}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/04-\/12
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{course_8h_af3abbc650ef56ffff427a62dad63fc77}\label{course_8h_af3abbc650ef56ffff427a62dad63fc77}} 
+\index{course.h@{course.h}!enroll\_student@{enroll\_student}}
+\index{enroll\_student@{enroll\_student}!course.h@{course.h}}
+\doxysubsubsection{\texorpdfstring{enroll\_student()}{enroll\_student()}}
+{\footnotesize\ttfamily void enroll\+\_\+student (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{course_8h_a2540079ef5f89c5f4aea7a0255f11475}{Course}} $\ast$}]{course,  }\item[{\mbox{\hyperlink{student_8h_ac91ec92866bb82e1ee36c75280929c43}{Student}} $\ast$}]{student }\end{DoxyParamCaption})}
+
+
+
+Increments the number of students in course and stores record of new student. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em course} & a course represented as a pointer \\
+\hline
+{\em student} & a student represented as a pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{course_8h_ab1ba9629dc52188231bb689d3a855813}\label{course_8h_ab1ba9629dc52188231bb689d3a855813}} 
+\index{course.h@{course.h}!passing@{passing}}
+\index{passing@{passing}!course.h@{course.h}}
+\doxysubsubsection{\texorpdfstring{passing()}{passing()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{student_8h_ac91ec92866bb82e1ee36c75280929c43}{Student}} $\ast$ passing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{course_8h_a2540079ef5f89c5f4aea7a0255f11475}{Course}} $\ast$}]{course,  }\item[{int $\ast$}]{total\+\_\+passing }\end{DoxyParamCaption})}
+
+
+
+Computes dynamic array of passing students for the given course. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em course} & a course represented as a pointer \\
+\hline
+{\em total\+\_\+passing} & the number of passing students is represented as a pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Student$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{course_8h_a99bf8b3f3c2d5dc7cf798ed445eaaa77}\label{course_8h_a99bf8b3f3c2d5dc7cf798ed445eaaa77}} 
+\index{course.h@{course.h}!print\_course@{print\_course}}
+\index{print\_course@{print\_course}!course.h@{course.h}}
+\doxysubsubsection{\texorpdfstring{print\_course()}{print\_course()}}
+{\footnotesize\ttfamily void print\+\_\+course (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{course_8h_a2540079ef5f89c5f4aea7a0255f11475}{Course}} $\ast$}]{course }\end{DoxyParamCaption})}
+
+
+
+Prints name, code, number of students, and list of students for a single course. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em course} & a course represented as a pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{course_8h_ac1d82150824c7ecd43bab36fb83cd779}\label{course_8h_ac1d82150824c7ecd43bab36fb83cd779}} 
+\index{course.h@{course.h}!top\_student@{top\_student}}
+\index{top\_student@{top\_student}!course.h@{course.h}}
+\doxysubsubsection{\texorpdfstring{top\_student()}{top\_student()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{student_8h_ac91ec92866bb82e1ee36c75280929c43}{Student}} $\ast$ top\+\_\+student (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{course_8h_a2540079ef5f89c5f4aea7a0255f11475}{Course}} $\ast$}]{course }\end{DoxyParamCaption})}
+
+
+
+Identifies the top student in the course. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em course} & a course represented as a pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Student$\ast$ 
+\end{DoxyReturn}
